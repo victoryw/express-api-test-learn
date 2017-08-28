@@ -4,11 +4,11 @@ const request = require('supertest');
 const should = require('should');
 const mongoose = require('mongoose');
 const mockGoose = require('mockgoose').Mockgoose;
+const mockGooseInstance = new mockGoose(mongoose);
 
 const app = require('../app');
 
 const userModel = require('../module/user');
-
 
 describe('test/app.test.js', ()=>{
     it('should test happy path', (done)=>{
